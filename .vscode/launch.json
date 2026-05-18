@@ -1,0 +1,21 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rust Debug (Cargo)",
+            "type": "lldb",
+            "request": "launch",
+            // 💡 这里使用了 CodeLLDB 的专属魔法，让 Cargo 自动寻找编译出的程序，免去手动写死路径的麻烦
+            "cargo": {
+                "args": [
+                    "build"
+                ]
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
