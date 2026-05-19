@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rust Debug (调试当前打开的项目)",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    // 动态寻找当前打开文件所在目录的上一级目录中的 Cargo.toml
+                    "--manifest-path=${fileDirname}/../Cargo.toml"
+                ]
+            },
+            "args": [],
+            // 工作目录也动态切换到当前项目的根目录
+            "cwd": "${fileDirname}/.."
+        }
+    ]
+}
