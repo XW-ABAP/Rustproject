@@ -1,12 +1,70 @@
-   0.123284000s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint: stale: changed "D:\\AI\\github\\rustproject\\random\\src\\main.rs"
-   0.123387700s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:           (vs) "D:\\AI\\github\\rustproject\\random\\target\\debug\\.fingerprint\\random-654a142c248fec56\\dep-bin-random"
-   0.123409000s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13423642270, nanos: 517337700 } < FileTime { seconds: 13423642292, nanos: 15234500 }
-   0.124985700s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint: fingerprint dirty for random v0.1.0 (D:\AI\github\rustproject\random)/Check { test: false }/TargetInner { name: "random", doc: true, ..: with_path("D:\\AI\\github\\rustproject\\random\\src\\main.rs", Edition2024) }
-   0.125055500s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "D:\\AI\\github\\rustproject\\random\\target\\debug\\.fingerprint\\random-654a142c248fec56\\dep-bin-random", reference_mtime: FileTime { seconds: 13423642270, nanos: 517337700 }, stale: "D:\\AI\\github\\rustproject\\random\\src\\main.rs", stale_mtime: FileTime { seconds: 13423642292, nanos: 15234500 } }))
-   0.141222300s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint: stale: changed "D:\\AI\\github\\rustproject\\random\\src\\main.rs"
-   0.141269300s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:           (vs) "D:\\AI\\github\\rustproject\\random\\target\\debug\\.fingerprint\\random-3e0d92fa27b8f135\\dep-test-bin-random"
-   0.141281300s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13423642270, nanos: 517337700 } < FileTime { seconds: 13423642292, nanos: 15234500 }
-   0.142954000s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint: fingerprint dirty for random v0.1.0 (D:\AI\github\rustproject\random)/Check { test: true }/TargetInner { name: "random", doc: true, ..: with_path("D:\\AI\\github\\rustproject\\random\\src\\main.rs", Edition2024) }
-   0.143014200s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "D:\\AI\\github\\rustproject\\random\\target\\debug\\.fingerprint\\random-3e0d92fa27b8f135\\dep-test-bin-random", reference_mtime: FileTime { seconds: 13423642270, nanos: 517337700 }, stale: "D:\\AI\\github\\rustproject\\random\\src\\main.rs", stale_mtime: FileTime { seconds: 13423642292, nanos: 15234500 } }))
+   0.087876800s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint: fingerprint error for random v0.1.0 (D:\AI\github\rustproject\random)/Check { test: false }/TargetInner { name: "random", doc: true, ..: with_path("D:\\AI\\github\\rustproject\\random\\src\\main.rs", Edition2024) }
+   0.087973600s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:     err: failed to read `D:\AI\github\rustproject\random\target\debug\.fingerprint\random-f9b8db4b475ec6e9\bin-random`
+
+Caused by:
+    系统找不到指定的文件。 (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+             at /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: <std::backtrace::Backtrace>::capture
+             at /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::cli::main
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+             at /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library\core\src\ops/function.rs:287:21
+  18: main
+  19: __tmainCRTStartup
+  20: mainCRTStartup
+  21: <unknown>
+  22: <unknown>
+   0.158247900s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint: fingerprint error for random v0.1.0 (D:\AI\github\rustproject\random)/Check { test: true }/TargetInner { name: "random", doc: true, ..: with_path("D:\\AI\\github\\rustproject\\random\\src\\main.rs", Edition2024) }
+   0.158334100s  INFO prepare_target{force=false package_id=random v0.1.0 (D:\AI\github\rustproject\random) target="random"}: cargo::core::compiler::fingerprint:     err: failed to read `D:\AI\github\rustproject\random\target\debug\.fingerprint\random-dd3896dba162dec0\test-bin-random`
+
+Caused by:
+    系统找不到指定的文件。 (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+             at /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
+   1: <std::backtrace::Backtrace>::capture
+             at /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library\std\src/backtrace.rs:296:9
+   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::cli::main
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+             at /rustc/59807616e1fa2540724bfbac14d7976d7e4a3860/library\core\src\ops/function.rs:287:21
+  18: main
+  19: __tmainCRTStartup
+  20: mainCRTStartup
+  21: <unknown>
+  22: <unknown>
     Checking random v0.1.0 (D:\AI\github\rustproject\random)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.83s
+error: could not compile `random` (bin "random" test) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `random` (bin "random") due to 2 previous errors
