@@ -1,1 +1,1 @@
-D:\AI\github\rustproject\comparison\target\debug\comparison.exe: D:\AI\github\rustproject\comparison\src\main.rs
+/workspaces/Rustproject/comparison/target/debug/comparison: /workspaces/Rustproject/comparison/src/main.rs
