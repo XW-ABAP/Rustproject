@@ -1,1 +1,1 @@
-C:\Users\XiaoYong\Documents\GitHub\Rustproject\helloworld\target\debug\helloworld.exe: C:\Users\XiaoYong\Documents\GitHub\Rustproject\helloworld\src\main.rs
+D:\AI\github\rustproject\helloworld\target\debug\helloworld.exe: D:\AI\github\rustproject\helloworld\src\main.rs

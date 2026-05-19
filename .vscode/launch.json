@@ -1,21 +1,20 @@
 {
-    // 使用 IntelliSense 了解相关属性。
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Rust Debug (Cargo)",
+            "name": "Rust Debug (Helloworld)",
             "type": "lldb",
             "request": "launch",
-            // 💡 这里使用了 CodeLLDB 的专属魔法，让 Cargo 自动寻找编译出的程序，免去手动写死路径的麻烦
             "cargo": {
                 "args": [
-                    "build"
+                    "build",
+                    // 💡 明确告诉 Cargo 编译哪个子文件夹下的项目
+                    "--manifest-path=${workspaceFolder}/helloworld/Cargo.toml"
                 ]
             },
             "args": [],
-            "cwd": "${workspaceFolder}"
+            // 💡 运行路径也切换到子文件夹
+            "cwd": "${workspaceFolder}/helloworld"
         }
     ]
 }
