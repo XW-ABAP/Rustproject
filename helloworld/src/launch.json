@@ -9,11 +9,11 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--manifest-path=${workspaceFolder}/your_project_name/Cargo.toml"
+                    "--manifest-path=${workspaceFolder}/helloworld/Cargo.toml"
                 ]
             },
             "args": [],
-            "cwd": "${workspaceFolder}/your_project_name"
+            "cwd": "${workspaceFolder}/helloworld"
         }
     ]
 }
